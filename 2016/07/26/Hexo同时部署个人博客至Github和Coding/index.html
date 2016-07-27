@@ -64,8 +64,10 @@
 <meta property="og:site_name" content="七夜阁">
 <meta property="og:description" content="前言以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。">
 <meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/05.png">
-<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/12.png">
-<meta property="og:updated_time" content="2016-07-26T15:20:46.023Z">
+<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/2.png">
+<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/1.png">
+<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/3.png">
+<meta property="og:updated_time" content="2016-07-27T14:13:25.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo同时部署个人博客至Github和Coding">
 <meta name="twitter:description" content="前言以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。">
@@ -284,10 +286,8 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。<br><a id="more"></a></p>
-<p>###为什么用Hexo搭建独立博客？</p>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>###为什么用Github和Coding托管平台？</p>
-<ul>
+<h3 id="为什么用Hexo搭建独立博客？"><a href="#为什么用Hexo搭建独立博客？" class="headerlink" title="为什么用Hexo搭建独立博客？"></a>为什么用Hexo搭建独立博客？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h3 id="为什么用Github和Coding托管平台？"><a href="#为什么用Github和Coding托管平台？" class="headerlink" title="为什么用Github和Coding托管平台？"></a>为什么用Github和Coding托管平台？</h3><ul>
 <li>Github是国外免费的Git代码托管平台。利用Github Page服务可以免费创建一个静态网站。</li>
 <li>Coding则是国内Git代码托管平台。也提供page服务。</li>
 </ul>
@@ -351,14 +351,21 @@
 </blockquote>
 <h2 id="安装并修改Hexo主题"><a href="#安装并修改Hexo主题" class="headerlink" title="安装并修改Hexo主题"></a>安装并修改Hexo主题</h2><p>安装Next主题<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">官方文档</a></p>
 <h2 id="发布新文章"><a href="#发布新文章" class="headerlink" title="发布新文章"></a>发布新文章</h2><p>在blog目录下，输入命令<br><code>$ hexo new &quot;hello&quot;</code><br>会提示在<code>blog\source\_posts\</code>目录下新建了<code>hello.md</code>的文件，使用Markdown的编辑器打开编辑即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: hello</div><div class="line">date: 2016-07-25 19:28:34</div><div class="line">tags: </div><div class="line">---</div><div class="line">hello!!!</div></pre></td></tr></table></figure></p>
-<p>编辑完成，即可部署博客<br>修改deploy的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo:</div><div class="line">      github: git@github.com:yourname/yourname.github.io.git,master</div><div class="line">      coding: git@git.coding.net:yourname/yourname.git,master</div></pre></td></tr></table></figure></p>
+<p>编辑完成，即可部署博客。<br>修改deploy的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo:</div><div class="line">      github: git@github.com:yourname/yourname.github.io.git,master</div><div class="line">      coding: git@git.coding.net:yourname/yourname.git,master</div></pre></td></tr></table></figure></p>
 <p>输入<code>$ hexo clean</code><br>再执行<br><code>$ hexo g</code>和<code>$ hexo d</code><br>可以合写出<br><code>$ hexo g -d</code><br>即可部署至Github和Coding。</p>
 <h2 id="开启Pages服务"><a href="#开启Pages服务" class="headerlink" title="开启Pages服务"></a>开启Pages服务</h2><ul>
-<li>Github部署完成后访问<code>username.github.io</code>即可正常访问博客</li>
-<li>Coding要单独开启Pages服务<br><img src="http://7xspil.com1.z0.glb.clouddn.com/12.png" alt=""></li>
+<li>Github部署完成后访问<code>username.github.io</code>即可正常访问博客。</li>
+<li>Coding要单独开启Pages服务。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/2.png" alt=""></li>
 </ul>
 <p>如果没设置分支，填入<code>master</code>，选择立即开启即可。<br>开启后，访问<code>username.coding.me</code>即可。</p>
-<h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2>
+<h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2><ul>
+<li>Github需要上传一个CNAME文件到根目录，内容为你要绑定的域名，我们只需在blog\source文件夹下新建一个CNAME文件，填上域名，部署到Github即可。</li>
+<li>Coding在Pages服务页面绑定个人域名即可。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/1.png" alt=""></li>
+</ul>
+<p>设置域名解析，我用的万网域名，在控制台进入域名解析界面，加入下面两条记录。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/3.png" alt=""></p>
+<h2 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h2><p>在<code>blog\themes\next\source\</code>下新建<code>404.html</code>文件，内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;404 - arao&apos;blog&lt;/title&gt;</div><div class="line">	&lt;meta name=&quot;description&quot; content=&quot;404错误，页面不存在！&quot;&gt;</div><div class="line">	&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</div><div class="line">	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</div><div class="line">	&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</div><div class="line">	&lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;http://qzonestyle.gtimg.cn/qzone_v6/lostchild/search_children.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>推荐使用<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛</a>。</p>
+
       
     </div>
 
@@ -381,20 +388,6 @@
         </div>
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/07/25/hello/" rel="next" title="hello">
-                <i class="fa fa-chevron-left"></i> hello
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -463,7 +456,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -480,7 +473,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -545,7 +538,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Github和Coding"><span class="nav-number">2.</span> <span class="nav-text">注册Github和Coding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装准备软件"><span class="nav-number">3.</span> <span class="nav-text">安装准备软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装并修改Hexo主题"><span class="nav-number">5.</span> <span class="nav-text">安装并修改Hexo主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布新文章"><span class="nav-number">6.</span> <span class="nav-text">发布新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启Pages服务"><span class="nav-number">7.</span> <span class="nav-text">开启Pages服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定个人域名"><span class="nav-number">8.</span> <span class="nav-text">绑定个人域名</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么用Hexo搭建独立博客？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么用Hexo搭建独立博客？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么用Github和Coding托管平台？"><span class="nav-number">1.2.</span> <span class="nav-text">为什么用Github和Coding托管平台？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Github和Coding"><span class="nav-number">2.</span> <span class="nav-text">注册Github和Coding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装准备软件"><span class="nav-number">3.</span> <span class="nav-text">安装准备软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装并修改Hexo主题"><span class="nav-number">5.</span> <span class="nav-text">安装并修改Hexo主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布新文章"><span class="nav-number">6.</span> <span class="nav-text">发布新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启Pages服务"><span class="nav-number">7.</span> <span class="nav-text">开启Pages服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定个人域名"><span class="nav-number">8.</span> <span class="nav-text">绑定个人域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#404页面"><span class="nav-number">9.</span> <span class="nav-text">404页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图床"><span class="nav-number">10.</span> <span class="nav-text">图床</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
