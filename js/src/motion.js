@@ -54,8 +54,8 @@ $(document).ready(function () {
   var sidebarToggleLine1st = new SidebarToggleLine({
     el: '.sidebar-toggle-line-first',
     status: {
-      arrow: {width: '50%', rotateZ: '-45deg', top: '2px'},
-      close: {width: '100%', rotateZ: '-45deg', top: '5px'}
+      arrow: {width: '50%', rotateZ: '-45deg', top: '2px', left: '-1px'},
+      close: {width: '27px', rotateZ: '-45deg', top: '5px', left: '-4px'}
     }
   });
   var sidebarToggleLine2nd = new SidebarToggleLine({
@@ -68,8 +68,8 @@ $(document).ready(function () {
   var sidebarToggleLine3rd = new SidebarToggleLine({
     el: '.sidebar-toggle-line-last',
     status: {
-      arrow: {width: '50%', rotateZ: '45deg', top: '-2px'},
-      close: {width: '100%', rotateZ: '45deg', top: '-5px'}
+      arrow: {width: '50%', rotateZ: '45deg', top: '-2px', left: '-1px'},
+      close: {width: '27px', rotateZ: '45deg', top: '-5px', left: '-4px'}
     }
   });
 
@@ -96,8 +96,6 @@ $(document).ready(function () {
             SIDEBAR_DISPLAY_DURATION
           );
         })
-        .on('sidebar.isHiding', function () {
-        });
     },
     clickHandler: function () {
       this.isSidebarVisible ? this.hideSidebar() : this.showSidebar();
