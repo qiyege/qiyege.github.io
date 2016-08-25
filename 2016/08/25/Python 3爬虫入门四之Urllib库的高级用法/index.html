@@ -57,19 +57,21 @@
 
 
 
-<meta name="description" content="爬虫是什么
-网络爬虫（又被称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。">
+<meta name="description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。
+首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 3爬虫入门一之综述">
-<meta property="og:url" content="http://qiyege.cc/2016/08/24/Python 3爬虫入门一之综述/index.html">
+<meta property="og:title" content="Python 3爬虫入门四之Urllib库的高级用法">
+<meta property="og:url" content="http://qiyege.cc/2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/index.html">
 <meta property="og:site_name" content="七夜阁">
-<meta property="og:description" content="爬虫是什么
-网络爬虫（又被称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。">
-<meta property="og:updated_time" content="2016-08-24T12:34:10.421Z">
+<meta property="og:description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。
+首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的">
+<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png">
+<meta property="og:updated_time" content="2016-08-25T12:51:08.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python 3爬虫入门一之综述">
-<meta name="twitter:description" content="爬虫是什么
-网络爬虫（又被称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。">
+<meta name="twitter:title" content="Python 3爬虫入门四之Urllib库的高级用法">
+<meta name="twitter:description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。
+首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的">
+<meta name="twitter:image" content="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png">
 
 
 
@@ -87,7 +89,7 @@
   };
 </script>
 
-  <title> Python 3爬虫入门一之综述 | 七夜阁 </title>
+  <title> Python 3爬虫入门四之Urllib库的高级用法 | 七夜阁 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -209,7 +211,7 @@
             
             
               
-                Python 3爬虫入门一之综述
+                Python 3爬虫入门四之Urllib库的高级用法
               
             
           </h1>
@@ -221,8 +223,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-24T19:48:20+08:00" content="2016-08-24">
-              2016-08-24
+            <time itemprop="dateCreated" datetime="2016-08-25T19:58:25+08:00" content="2016-08-25">
+              2016-08-25
             </time>
           </span>
 
@@ -251,8 +253,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/24/Python 3爬虫入门一之综述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/24/Python 3爬虫入门一之综述/" itemprop="commentsCount"></span>
+                <a href="/2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -262,7 +264,7 @@
 
           
           
-             <span id="/2016/08/24/Python 3爬虫入门一之综述/" class="leancloud_visitors" data-flag-title="Python 3爬虫入门一之综述">
+             <span id="/2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/" class="leancloud_visitors" data-flag-title="Python 3爬虫入门四之Urllib库的高级用法">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -283,30 +285,30 @@
       
 
       
-        <h2 id="爬虫是什么"><a href="#爬虫是什么" class="headerlink" title="爬虫是什么"></a>爬虫是什么</h2><blockquote>
-<p>网络爬虫（又被称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。<br><a id="more"></a></p>
-</blockquote>
-<p>要学习Python爬虫，我们要学习的共有以下几点：</p>
-<ul>
-<li>Python基础知识</li>
-<li>Python中urllib库的用法</li>
-<li>Python正则表达式</li>
-<li>Python爬虫框架Scrapy</li>
-<li>Python爬虫更高级的功能</li>
-</ul>
-<h2 id="Python基础学习"><a href="#Python基础学习" class="headerlink" title="Python基础学习"></a>Python基础学习</h2><ol>
-<li><a href="http://www.imooc.com/view/177" title="慕课网Python教程" target="_blank" rel="external">慕课网Python教程</a></li>
-<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" title="廖雪峰Python 3教程" target="_blank" rel="external">廖雪峰Python 3教程</a></li>
-</ol>
-<h2 id="Python-3-urllib库的用法"><a href="#Python-3-urllib库的用法" class="headerlink" title="Python 3 urllib库的用法"></a>Python 3 urllib库的用法</h2><p>Python 3中urllib和urllib2合成了一个urllib库，利用这个库我们可以得到网页的内容，并对内容用正则表达式提取分析，得到我们想要的结果。</p>
-<h2 id="Python正则表达式"><a href="#Python正则表达式" class="headerlink" title="Python正则表达式"></a>Python正则表达式</h2><p>Python正则表达式是一种用来匹配字符串的强有力的武器。它的设计思想是用一种描述性的语言来给字符串定义一个规则，凡是符合规则的字符串，我们就认为它“匹配”了，否则，该字符串就是不合法的。</p>
-<h2 id="爬虫框架Scrapy"><a href="#爬虫框架Scrapy" class="headerlink" title="爬虫框架Scrapy"></a>爬虫框架Scrapy</h2><p>如果你是一个Python高手，基本的爬虫知识都已经掌握了，那么就寻觅一下Python框架吧，我选择的框架是Scrapy框架。这个框架有什么强大的功能呢？下面是它的官方介绍：</p>
+        <h2 id="设置Headers"><a href="#设置Headers" class="headerlink" title="设置Headers"></a>设置Headers</h2><p>有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。</p>
+<p>首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的，实质上是执行了好多次请求，一般是首先请求HTML文件，然后加载JS、CSS等等，经过多次请求之后，网页的骨架和肌肉全了，整个网页的效果就出来了。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png" alt=""><br>拆分这些请求，我们只看第一个请求，你可以看到，有个Request URL，还有Headers，下边便是response。这个里面包含了许许许多的信息，有文件编码、压缩方式、请求的agent等等。</p>
+<p>其中，agent就是请求的身份，如果没有写入请求身份，那么服务器不一定会响应，所以可以在headers中设置agent，例如下面的例子，这个例子只是说明了怎么样设置headers。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">import urllib.parse</div><div class="line"></div><div class="line">url = &apos;http://www.server.com/login&apos;</div><div class="line">user_agent = &apos;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&apos;  </div><div class="line">values = &#123;&apos;username&apos; : &apos;cqc&apos;,  &apos;password&apos; : &apos;XXXX&apos; &#125; </div><div class="line">headers = &#123; &apos;User-Agent&apos; : user_agent &#125; </div><div class="line">data = urllib.parse.urlencode(values)</div><div class="line">request = urllib.request.Request(url,data,headers)</div><div class="line">response = urllib.request.urlopen(request)</div><div class="line">page = response.read()</div></pre></td></tr></table></figure></p>
+<p>这样，我们设置了一个headers，在构建request时传入，在请求时，就加入了headers传送，服务器若识别了是浏览器发来的请求，就会得到响应。</p>
+<p>另外，我们还有对付“反盗链”的方式，对付防盗链，服务器会识别headers中的referer是不是它自己，如果不是，有的服务器不会响应，所以我们还可以在headers中加入referer。</p>
+<p>例如我们可以构建下面的headers<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">headers = &#123;&apos;User-Agent&apos; : &apos;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&apos;,&apos;Referer&apos;:&apos;http://www.zhihu.com/articles&apos;&#125;</div></pre></td></tr></table></figure></p>
+<p>同上面的方法，在传送请求时把headers传入Request参数里，这样就能应付防盗链了。<br>另外headers的一些属性，下面的需要特别注意一下：</p>
 <blockquote>
-<p>HTML, XML源数据 选择及提取 的内置支持<br>提供了一系列在spider之间共享的可复用的过滤器(即 Item Loaders)，对智能处理爬取数据提供了内置支持。<br>通过 feed导出 提供了多格式(JSON、CSV、XML)，多存储后端(FTP、S3、本地文件系统)的内置支持<br>提供了media pipeline，可以 自动下载 爬取到的数据中的图片(或者其他资源)。<br>高扩展性。您可以通过使用 signals ，设计好的API(中间件, extensions, pipelines)来定制实现您的功能。<br>内置的中间件及扩展为下列功能提供了支持:<br>cookies and session 处理<br>HTTP 压缩<br>HTTP 认证<br>HTTP 缓存<br>user-agent模拟<br>robots.txt<br>爬取深度限制<br>针对非英语语系中不标准或者错误的编码声明, 提供了自动检测以及健壮的编码支持。<br>支持根据模板生成爬虫。在加速爬虫创建的同时，保持在大型项目中的代码更为一致。详细内容请参阅 genspider 命令。<br>针对多爬虫下性能评估、失败检测，提供了可扩展的 状态收集工具 。<br>提供 交互式shell终端 , 为您测试XPath表达式，编写和调试爬虫提供了极大的方便<br>提供 System service, 简化在生产环境的部署及运行<br>内置 Web service, 使您可以监视及控制您的机器<br>内置 Telnet终端 ，通过在Scrapy进程中钩入Python终端，使您可以查看并且调试爬虫<br>Logging 为您在爬取过程中捕捉错误提供了方便<br>支持 Sitemaps 爬取<br>具有缓存的DNS解析器</p>
+<p>User-Agent : 有些服务器或 Proxy 会通过该值来判断是否是浏览器发出的请求<br>Content-Type : 在使用 REST 接口时，服务器会检查该值，用来确定 HTTP Body 中的内容该怎样解析。<br>application/xml ： 在 XML RPC，如 RESTful/SOAP 调用时使用<br>application/json ： 在 JSON RPC 调用时使用<br>application/x-www-form-urlencoded ： 浏览器提交 Web 表单时使用<br>在使用服务器提供的 RESTful 或 SOAP 服务时， Content-Type 设置错误会导致服务器拒绝服务</p>
 </blockquote>
-<p>官方文档：<a href="http://doc.scrapy.org/en/latest/" target="_blank" rel="external">http://doc.scrapy.org/en/latest/</a></p>
+<p>其他的有必要的可以审查浏览器的headers内容，在构建时写入同样的数据即可。</p>
+<h2 id="Proxy（代理）的设置"><a href="#Proxy（代理）的设置" class="headerlink" title="Proxy（代理）的设置"></a>Proxy（代理）的设置</h2><p>urllib默认会使用环境变量http_proxy来设置HTTP Proxy。加入一个网站它会检测某一段时间某个IP的访问次数，如果访问次数过多，它就会禁止你的访问。所以你可以设置一些代理服务器来帮助你做工作，每隔一段时间换一个代理，网站君都不知道是谁在捣鬼了。<br>下面一段代码说明了代理的设置用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">enable_proxy = True</div><div class="line">proxy_handler = urllib.request.ProxyHandler(&#123;&apos;http&apos;:&apos;http://some-proxy.com:8080&apos;&#125;)</div><div class="line">null_proxy_handler = urllib.request.ProxyHandler(&#123;&#125;)</div><div class="line">if enable_proxy:</div><div class="line">    opener = urllib.request.build_opener(proxy_handler)</div><div class="line">else:</div><div class="line">    opener = urllib.request.build_opener(null_proxy_handler)</div><div class="line">urllib.request.install_opener(opener)</div></pre></td></tr></table></figure></p>
+<h2 id="Timeout-设置"><a href="#Timeout-设置" class="headerlink" title="Timeout 设置"></a>Timeout 设置</h2><p>上一节已经说过urlopen方法了，第三个参数就是timeout的设置，可以设置等待多久超时，为了解决一些网站是在响应过慢而造成的影响。</p>
+<p>例如下面的代码，如果第二个参数data为空，那么要特别指定timeout是多少，写明形参，如果data已经传入，则不必声明。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">response = urllib.request.urlopen(&apos;http://www.baidu.com&apos;,timeout=10)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">response = urllib.request.urlopen(&apos;http://www.baidu.com&apos;,timeout=10)</div></pre></td></tr></table></figure>
+<h2 id="使用HTTP的PUT和DELETE方法"><a href="#使用HTTP的PUT和DELETE方法" class="headerlink" title="使用HTTP的PUT和DELETE方法"></a>使用HTTP的PUT和DELETE方法</h2><p>http协议有六种请求方法，get、head、put、delete、post、options，我们有时候需要用到PUT方式或者DELETE方式请求。</p>
 <blockquote>
-<p>请参考 <a href="http://cuiqingcai.com/" target="_blank" rel="external">静觅</a>&gt;&gt;<a href="http://cuiqingcai.com/927.html" title="Python爬虫入门一之综述" target="_blank" rel="external">《Python爬虫入门一之综述》</a></p>
+<p>PUT：这个方法比较少见。HTML表单也不支持这个。本质上来讲， PUT和POST极为相似，都是向服务器发送数据，但它们之间有一个重要区别，PUT通常指定了资源的存放位置，而POST则没有，POST的数据存放位置由服务器自己决定。<br>DELETE：删除某一个资源。基本上这个也很少见，不过还是有一些地方比如amazon的S3云服务里面就用的这个方法来删除资源。</p>
+</blockquote>
+<p>如果要使用HTTP PUT和DELETE，只能使用比较底层的httplib库。虽然如此，我们还是能通过下面的方式，是urllib能够发出PUT或DELETE请求，不过用的次数的确是少，在这里提一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">request = urllib.request.Request(uri, data=data)</div><div class="line">request.get_method = lambda: &apos;PUT&apos; # or &apos;DELETE&apos;</div><div class="line">response = urllib.request.urlopen(request)</div></pre></td></tr></table></figure></p>
+<h2 id="使用DebugLog"><a href="#使用DebugLog" class="headerlink" title="使用DebugLog"></a>使用DebugLog</h2><p>可以通过下面的方法把Debug Log打开，这样收发包的内容就会在屏幕上打印出来，方便调试，这个也不太常用，仅提一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">httpHandler = urllib.request.HTTPHandler(debuglevel=1)</div><div class="line">httpsHandler = urllib.request.HTTPSHandler(debuglevel=1)</div><div class="line">opener = urllib.request.build_opener(httpHandler, httpsHandler)</div><div class="line">urllib.request.install_opener(opener)</div><div class="line">response = urllib.request.urlopen(&apos;http://www.baidu.com&apos;)</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>请参考 <a href="http://cuiqingcai.com/" target="_blank" rel="external">静觅</a>&gt;&gt;<a href="http://cuiqingcai.com/954.html" title="Python爬虫入门四之Urllib库的高级用法" target="_blank" rel="external">《Python爬虫入门四之Urllib库的高级用法》</a></p>
 </blockquote>
 
       
@@ -333,17 +335,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/24/Python 3爬虫学习系列教程/" rel="next" title="Python 3爬虫学习系列教程">
-                <i class="fa fa-chevron-left"></i> Python 3爬虫学习系列教程
+              <a href="/2016/08/24/Python 3爬虫入门三之Urllib库的基本使用/" rel="next" title="Python 3爬虫入门三之Urllib库的基本使用">
+                <i class="fa fa-chevron-left"></i> Python 3爬虫入门三之Urllib库的基本使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/24/Python 3爬虫入门二之爬虫基础了解/" rel="prev" title="Python 3爬虫入门二之爬虫基础了解">
-                Python 3爬虫入门二之爬虫基础了解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -369,8 +367,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/24/Python 3爬虫入门一之综述/"
-           data-title="Python 3爬虫入门一之综述" data-url="http://qiyege.cc/2016/08/24/Python 3爬虫入门一之综述/">
+      <div class="ds-thread" data-thread-key="2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/"
+           data-title="Python 3爬虫入门四之Urllib库的高级用法" data-url="http://qiyege.cc/2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/">
       </div>
     
   </div>
@@ -476,7 +474,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#爬虫是什么"><span class="nav-number">1.</span> <span class="nav-text">爬虫是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础学习"><span class="nav-number">2.</span> <span class="nav-text">Python基础学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-3-urllib库的用法"><span class="nav-number">3.</span> <span class="nav-text">Python 3 urllib库的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python正则表达式"><span class="nav-number">4.</span> <span class="nav-text">Python正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爬虫框架Scrapy"><span class="nav-number">5.</span> <span class="nav-text">爬虫框架Scrapy</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置Headers"><span class="nav-number">1.</span> <span class="nav-text">设置Headers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proxy（代理）的设置"><span class="nav-number">2.</span> <span class="nav-text">Proxy（代理）的设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Timeout-设置"><span class="nav-number">3.</span> <span class="nav-text">Timeout 设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用HTTP的PUT和DELETE方法"><span class="nav-number">4.</span> <span class="nav-text">使用HTTP的PUT和DELETE方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用DebugLog"><span class="nav-number">5.</span> <span class="nav-text">使用DebugLog</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
