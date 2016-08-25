@@ -57,20 +57,17 @@
 
 
 
-<meta name="description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。
-首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的">
+<meta name="description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 3爬虫入门四之Urllib库的高级用法">
 <meta property="og:url" content="http://qiyege.cc/2016/08/25/Python 3爬虫入门四之Urllib库的高级用法/index.html">
 <meta property="og:site_name" content="七夜阁">
-<meta property="og:description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。
-首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的">
+<meta property="og:description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。">
 <meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png">
-<meta property="og:updated_time" content="2016-08-25T12:51:08.376Z">
+<meta property="og:updated_time" content="2016-08-25T13:13:09.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 3爬虫入门四之Urllib库的高级用法">
-<meta name="twitter:description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。
-首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的">
+<meta name="twitter:description" content="设置Headers有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。">
 <meta name="twitter:image" content="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png">
 
 
@@ -285,8 +282,7 @@
       
 
       
-        <h2 id="设置Headers"><a href="#设置Headers" class="headerlink" title="设置Headers"></a>设置Headers</h2><p>有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。</p>
-<p>首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的，实质上是执行了好多次请求，一般是首先请求HTML文件，然后加载JS、CSS等等，经过多次请求之后，网页的骨架和肌肉全了，整个网页的效果就出来了。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png" alt=""><br>拆分这些请求，我们只看第一个请求，你可以看到，有个Request URL，还有Headers，下边便是response。这个里面包含了许许许多的信息，有文件编码、压缩方式、请求的agent等等。</p>
+        <h2 id="设置Headers"><a href="#设置Headers" class="headerlink" title="设置Headers"></a>设置Headers</h2><p>有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers的属性。<br><a id="more"></a><br>首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听，示意如下，比如知乎，点登录之后，我们会发现登陆之后界面都变化了，出现一个新的界面，实质上这个页面包含了许许多多的内容，这些内容也不是一次性就加载完成的，实质上是执行了好多次请求，一般是首先请求HTML文件，然后加载JS、CSS等等，经过多次请求之后，网页的骨架和肌肉全了，整个网页的效果就出来了。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/2015-02-13-013155-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-e1423762350360-1024x424.png" alt=""><br>拆分这些请求，我们只看第一个请求，你可以看到，有个Request URL，还有Headers，下边便是response。这个里面包含了许许许多的信息，有文件编码、压缩方式、请求的agent等等。</p>
 <p>其中，agent就是请求的身份，如果没有写入请求身份，那么服务器不一定会响应，所以可以在headers中设置agent，例如下面的例子，这个例子只是说明了怎么样设置headers。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">import urllib.parse</div><div class="line"></div><div class="line">url = &apos;http://www.server.com/login&apos;</div><div class="line">user_agent = &apos;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&apos;  </div><div class="line">values = &#123;&apos;username&apos; : &apos;cqc&apos;,  &apos;password&apos; : &apos;XXXX&apos; &#125; </div><div class="line">headers = &#123; &apos;User-Agent&apos; : user_agent &#125; </div><div class="line">data = urllib.parse.urlencode(values)</div><div class="line">request = urllib.request.Request(url,data,headers)</div><div class="line">response = urllib.request.urlopen(request)</div><div class="line">page = response.read()</div></pre></td></tr></table></figure></p>
 <p>这样，我们设置了一个headers，在构建request时传入，在请求时，就加入了headers传送，服务器若识别了是浏览器发来的请求，就会得到响应。</p>
 <p>另外，我们还有对付“反盗链”的方式，对付防盗链，服务器会识别headers中的referer是不是它自己，如果不是，有的服务器不会响应，所以我们还可以在headers中加入referer。</p>
