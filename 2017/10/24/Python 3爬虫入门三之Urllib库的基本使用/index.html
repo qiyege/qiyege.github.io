@@ -41,7 +41,7 @@
 <link href="/css/important.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,Github,Coding," />
+  <meta name="keywords" content="Python 3,爬虫," />
 
 
 
@@ -57,21 +57,18 @@
 
 
 
-<meta name="description" content="前言以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。">
+<meta name="description" content="分分钟扒一个网页下来怎么样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是这其实是由浏览器解释才呈现出来的，实质它是一段HTML代码，加JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是他的衣服。所以总重要的部分是存在于HTML中的，下面我们就写个例子来扒一个网页下来。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo同时部署个人博客至Github和Coding">
-<meta property="og:url" content="http://qiyege.cc/2016/07/26/Hexo同时部署个人博客至Github和Coding/index.html">
+<meta property="og:title" content="Python 3爬虫入门三之Urllib库的基本使用">
+<meta property="og:url" content="http://qiyege.cc/2017/10/24/Python 3爬虫入门三之Urllib库的基本使用/index.html">
 <meta property="og:site_name" content="七夜阁">
-<meta property="og:description" content="前言以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。">
-<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/05.png">
-<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/2.png">
-<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/1.png">
-<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/3.png">
-<meta property="og:updated_time" content="2016-07-27T14:13:25.074Z">
+<meta property="og:description" content="分分钟扒一个网页下来怎么样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是这其实是由浏览器解释才呈现出来的，实质它是一段HTML代码，加JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是他的衣服。所以总重要的部分是存在于HTML中的，下面我们就写个例子来扒一个网页下来。">
+<meta property="og:image" content="http://7xspil.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160824205338.png">
+<meta property="og:updated_time" content="2017-12-28T14:38:32.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo同时部署个人博客至Github和Coding">
-<meta name="twitter:description" content="前言以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。">
-<meta name="twitter:image" content="http://7xspil.com1.z0.glb.clouddn.com/05.png">
+<meta name="twitter:title" content="Python 3爬虫入门三之Urllib库的基本使用">
+<meta name="twitter:description" content="分分钟扒一个网页下来怎么样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是这其实是由浏览器解释才呈现出来的，实质它是一段HTML代码，加JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是他的衣服。所以总重要的部分是存在于HTML中的，下面我们就写个例子来扒一个网页下来。">
+<meta name="twitter:image" content="http://7xspil.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160824205338.png">
 
 
 
@@ -89,7 +86,7 @@
   };
 </script>
 
-  <title> Hexo同时部署个人博客至Github和Coding | 七夜阁 </title>
+  <title> Python 3爬虫入门三之Urllib库的基本使用 | 七夜阁 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -211,7 +208,7 @@
             
             
               
-                Hexo同时部署个人博客至Github和Coding
+                Python 3爬虫入门三之Urllib库的基本使用
               
             
           </h1>
@@ -223,8 +220,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-26T18:46:24+08:00" content="2016-07-26">
-              2016-07-26
+            <time itemprop="dateCreated" datetime="2017-10-24T20:36:43+08:00" content="2017-10-24">
+              2017-10-24
             </time>
           </span>
 
@@ -237,8 +234,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/博客/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -253,8 +250,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/26/Hexo同时部署个人博客至Github和Coding/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/26/Hexo同时部署个人博客至Github和Coding/" itemprop="commentsCount"></span>
+                <a href="/2017/10/24/Python 3爬虫入门三之Urllib库的基本使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/24/Python 3爬虫入门三之Urllib库的基本使用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -264,7 +261,7 @@
 
           
           
-             <span id="/2016/07/26/Hexo同时部署个人博客至Github和Coding/" class="leancloud_visitors" data-flag-title="Hexo同时部署个人博客至Github和Coding">
+             <span id="/2017/10/24/Python 3爬虫入门三之Urllib库的基本使用/" class="leancloud_visitors" data-flag-title="Python 3爬虫入门三之Urllib库的基本使用">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -285,86 +282,29 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前也搭建过博客，不过因为自己的懒惰，没怎么管理，这次重新搭建，旨在记录自己的学习和生活，也培养自己的耐心。<br><a id="more"></a></p>
-<h3 id="为什么用Hexo搭建独立博客？"><a href="#为什么用Hexo搭建独立博客？" class="headerlink" title="为什么用Hexo搭建独立博客？"></a>为什么用Hexo搭建独立博客？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h3 id="为什么用Github和Coding托管平台？"><a href="#为什么用Github和Coding托管平台？" class="headerlink" title="为什么用Github和Coding托管平台？"></a>为什么用Github和Coding托管平台？</h3><ul>
-<li>Github是国外免费的Git代码托管平台。利用Github Page服务可以免费创建一个静态网站。</li>
-<li>Coding则是国内Git代码托管平台。也提供page服务。</li>
-</ul>
-<p>利用两个平台托管，可以利用域名解析实现国内的走coding，海外的走github，分流网站的访问。</p>
-<h2 id="注册Github和Coding"><a href="#注册Github和Coding" class="headerlink" title="注册Github和Coding"></a>注册Github和Coding</h2><p>登陆<a href="http://github.com/" target="_blank" rel="external">Github官网</a>和<a href="https://coding.net/" target="_blank" rel="external">Coding官网</a>，注册账号。创建以自己用户名为名字的项目，Github项目格式为<code>username.github.io</code>,Coding的项目名称为<code>username</code>。</p>
-<p>##配置SSH密钥</p>
-<ol>
-<li>查看是否已经有了ssh密钥，进入Git Bush,输入命令<br><code>$ cd ~/.ssh</code><br>如果没有则提示： No such file or directory<br>如果有则进入~/.ssh路径下</li>
-<li>生成密钥<br><code>$ ssh-keygen -t rsa -C &quot;email地址&quot;</code></li>
-</ol>
+        <h2 id="分分钟扒一个网页下来"><a href="#分分钟扒一个网页下来" class="headerlink" title="分分钟扒一个网页下来"></a>分分钟扒一个网页下来</h2><p>怎么样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是这其实是由浏览器解释才呈现出来的，实质它是一段HTML代码，加JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是他的衣服。所以总重要的部分是存在于HTML中的，下面我们就写个例子来扒一个网页下来。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">response = urllib.request.urlopen(&quot;http://www.baidu.com&quot;)</div><div class="line">print(response.read())</div></pre></td></tr></table></figure></p>
+<p>运行一下</p>
+<p><img src="http://7xspil.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160824205338.png" alt=""></p>
+<p>这个网页的源代码已经被我们扒下来了。</p>
+<h2 id="分析扒网页的方法"><a href="#分析扒网页的方法" class="headerlink" title="分析扒网页的方法"></a>分析扒网页的方法</h2><p>那么我们来分析这两行代码，第一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">response = urllib.request.urlopen(&quot;http://www.baidu.com&quot;)</div></pre></td></tr></table></figure></p>
+<p>首先我们调用的是urllib库里的request模块里面的urlopen方法，传入一个URL，这个网页是百度首页，协议是HTTP协议，当然你也可以把HTTP换做FTP、FILE、HTTPS等等，只是代表了一种访问控制协议，urlope的参数如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">urllib.request.urlopen(url, data=None, [timeout, ]*, cafile=None, capath=None, cadefault=False, context=None)</div></pre></td></tr></table></figure></p>
+<p>常用的就是前三个参数：url， data<br>第一个参数url即URL，第二个参数data是访问URL时要传送的数据。<br>第一个参数URL是必须要传送的，在这个例子里面我们传送了百度的URL，执行urlopen方法之后，返回一个response对象，返回信息便保存在这里面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(response.read())</div></pre></td></tr></table></figure></p>
+<p>response对象有一个read方法，可以返回获取到的网页内容。<br>如果不加read直接打印会是什么？答案如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;http.client.HTTPResponse object at 0x0000028A8480C588&gt;</div></pre></td></tr></table></figure></p>
+<p>直接打印出了该对象的描述，所以记得一定要加read方法。</p>
+<h2 id="构造Request"><a href="#构造Request" class="headerlink" title="构造Request"></a>构造Request</h2><p>其实上面的urlopen参数可以传入一个request请求，它其实就是一个Request类的实例，构造时需要传入url，data等等的内容。比如上面的两行代码，我们可以这么改写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">request = urllib.request.Request(&quot;http://www.baidu.com&quot;)</div><div class="line">response = urllib.request.urlopen(request)</div><div class="line">print(response.read())</div></pre></td></tr></table></figure></p>
+<p>运行结果是完全一样的，只不过中间多了一个request对象，推荐大家这么写，因为在构建请求时还需要加入好多内容，通过构建一个request，服务器响应请求得到应答，这样显得逻辑上清晰明确。</p>
+<h2 id="POST和GET数据传送"><a href="#POST和GET数据传送" class="headerlink" title="POST和GET数据传送"></a>POST和GET数据传送</h2><p>上面的程序演示了最基本的网页抓取，不过，现在大多数网页都是动态网页，需要你动态地传递参数给它，它做出对应的响应。所以，在访问时，我们需要传递数据给它。最常见的情况是什么？对了，就是登陆注册的时候。</p>
+<p>把数据用户名和密码传送到一个URL，然后你得到服务器处理之后的响应，这个该怎么办？</p>
+<p>数据传送分为POST和GET两种方式，两种方式有什么区别呢？</p>
+<p>最重要的区别就是GET方式是直接以链接形式访问，链接中包含了所有的参数，当然如果包含了密码的话是一种不安全的选择，不过你可以直观地看到自己提交了什么内容。POST则不会在网址上显示所有的参数，不过如果你想直接查看提交什么就不太方便了，大家可以酌情选择。</p>
+<h3 id="POST方式"><a href="#POST方式" class="headerlink" title="POST方式"></a>POST方式</h3><p>上面我们说了data参数是干嘛的？对了，它就是用在这里的，我们传送的数据就是这个参数data，下面演示一下POST方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">import urllib.parse</div><div class="line">values = &#123;&quot;username&quot;:&quot;1016903103@qq.com&quot;,&quot;password&quot;:&quot;XXXX&quot;&#125;</div><div class="line">data = urllib.parse.urlencode(values)</div><div class="line">url = &quot;https://passport.csdn.net/account/login?from=http://my.csdn.net/my/mycsdn&quot;</div><div class="line">request = urllib.request.Request(url,data)</div><div class="line">response = urllib.request.urlopen(request)</div><div class="line">print(response.read())</div></pre></td></tr></table></figure>
+<p>现在我们模拟登陆CSDN，当然上述代码可能登陆不进去，因为还要做一些设置头部header的工作，或者还有一些参数没有设置全，还没有提及到在此就不写上去了，在此只是说明登陆的原理。我们需要定义一个字典，名字为values，参数我设置了username和password，下面利用urlencode方法将字典编码，命名为data，构建request时传入两个参数，url和data，运行程序，即可实现登陆，返回的便是登陆后呈现的页面内容。<br>以上方法便实现了POST方式的传送。</p>
+<h3 id="GET方式"><a href="#GET方式" class="headerlink" title="GET方式"></a>GET方式</h3><p>至于GET方式我们可以直接把参数写在网址上面，直接构建一个带参数的URL出来即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import urllib.request</div><div class="line">import urllib.parse</div><div class="line">values = &#123;&quot;username&quot;:&quot;1016903103@qq.com&quot;,&quot;password&quot;:&quot;XXXX&quot;&#125;</div><div class="line">data = urllib.parse.urlencode(values)</div><div class="line">url = &quot;https://passport.csdn.net/account/login&quot;</div><div class="line">geturl = url + &quot;?&quot; + data</div><div class="line">request = urllib.request.Request(geturl)</div><div class="line">response = urllib.request.urlopen(request)</div><div class="line">print(response.read())</div></pre></td></tr></table></figure></p>
+<p>你可以print(geturl)，打印输出一下url，发现其实就是原来的url加？然后加编码后的参数。这样就实现了数据的GET方式传送。</p>
 <blockquote>
-<p>Generating public/private rsa key pair.<br>Enter file in which to save the key (/c/Users/xxx/.ssh/id_rsa): #不填直接回车<br>Enter passphrase (empty for no passphrase): #输入密码（可以为空）<br>Enter same passphrase again:#再次确认密码（可以为空）</p>
+<p>请参考 <a href="http://cuiqingcai.com/" target="_blank" rel="external">静觅</a>&gt;&gt;<a href="http://cuiqingcai.com/947.html" title="Python爬虫入门三之Urllib库的基本使用" target="_blank" rel="external">《Python爬虫入门三之Urllib库的基本使用》</a></p>
 </blockquote>
-<p>出现下图则说明生成密钥成功<br><img src="http://7xspil.com1.z0.glb.clouddn.com/05.png" alt=""></p>
-<ol>
-<li>进入C:/Users/xxx/.ssh目录，打开id_rsa.pub文件，全选复制。</li>
-<li>添加ssh key 到Github和Coding<ul>
-<li>Github：点击右上角账号头像的“▼”→Settings→SSH kyes→Add SSH and GPG keys→New SSH key，将复制的内容粘贴至Key。</li>
-<li>Coding：点击右上角账号头像→账户→SSH 公钥，将复制的内容粘贴至公钥内容。</li>
-</ul>
-</li>
-<li><p>打开Git Bush,输入命令<br><code>$ ssh -T git@github.com</code><br>如果现实以下内容，则说明Github中ssh配置成功。</p>
-<blockquote>
-<p>Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
-<p>输入命令<br><code>$ ssh -T git@git.coding.net</code><br>如果显示以下则说明coding中的ssh配置成功。</p>
-<blockquote>
-<p>Hello username You’ve connected to Coding.net by SSH successfully!</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="安装准备软件"><a href="#安装准备软件" class="headerlink" title="安装准备软件"></a>安装准备软件</h2><ul>
-<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
-<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
-</ul>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ol>
-<li>安装Hexo要用到npm，不过速度实在有点慢，所以换成淘宝镜像<br><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
-<li>新建一个文件夹，例如blog。</li>
-<li>进入blog文件夹，右键点击Git Bash Here。</li>
-<li>安装Hexo<br><code>$ cnpm install hexo-cli -g</code></li>
-<li>初始化blog文件夹<br><code>$ hexo init</code></li>
-<li>安装依赖和插件<br><code>$ cnpm install</code></li>
-<li>启动服务器进行本地预览<br><code>$ hexo s</code><br>在浏览器中打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，成功的话即可看到博客页面，至此安装就完成了。</li>
-</ol>
-<blockquote>
-<p>Hexo 常用命令</p>
-<ul>
-<li><code>$ hexo g</code>生成静态文件</li>
-<li><code>$ hexo s</code> 启动服务器</li>
-<li><code>$ hexo d</code> 部署网站。部署网站前，需要预先生成静态文件</li>
-<li><code>$ hexo clean</code>清除缓存文件 (db.json) 和已生成的静态文件 (public)</li>
-</ul>
-<p>卸载Hexo</p>
-<ul>
-<li>3.0.0版本执行<code>$ npm uninstall hexo-cli -g</code>，之前版本执行<code>$ npm uninstall hexo -g</code></li>
-</ul>
-<p>安装旧版本Hexo，以3.8.3为例</p>
-<ul>
-<li><code>$ npm install hexo@2.8.3 -g</code></li>
-</ul>
-</blockquote>
-<h2 id="安装并修改Hexo主题"><a href="#安装并修改Hexo主题" class="headerlink" title="安装并修改Hexo主题"></a>安装并修改Hexo主题</h2><p>安装Next主题<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">官方文档</a></p>
-<h2 id="发布新文章"><a href="#发布新文章" class="headerlink" title="发布新文章"></a>发布新文章</h2><p>在blog目录下，输入命令<br><code>$ hexo new &quot;hello&quot;</code><br>会提示在<code>blog\source\_posts\</code>目录下新建了<code>hello.md</code>的文件，使用Markdown的编辑器打开编辑即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: hello</div><div class="line">date: 2016-07-25 19:28:34</div><div class="line">tags: </div><div class="line">---</div><div class="line">hello!!!</div></pre></td></tr></table></figure></p>
-<p>编辑完成，即可部署博客。<br>修改deploy的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo:</div><div class="line">      github: git@github.com:yourname/yourname.github.io.git,master</div><div class="line">      coding: git@git.coding.net:yourname/yourname.git,master</div></pre></td></tr></table></figure></p>
-<p>输入<code>$ hexo clean</code><br>再执行<br><code>$ hexo g</code>和<code>$ hexo d</code><br>可以合写出<br><code>$ hexo g -d</code><br>即可部署至Github和Coding。</p>
-<h2 id="开启Pages服务"><a href="#开启Pages服务" class="headerlink" title="开启Pages服务"></a>开启Pages服务</h2><ul>
-<li>Github部署完成后访问<code>username.github.io</code>即可正常访问博客。</li>
-<li>Coding要单独开启Pages服务。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/2.png" alt=""></li>
-</ul>
-<p>如果没设置分支，填入<code>master</code>，选择立即开启即可。<br>开启后，访问<code>username.coding.me</code>即可。</p>
-<h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2><ul>
-<li>Github需要上传一个CNAME文件到根目录，内容为你要绑定的域名，我们只需在blog\source文件夹下新建一个CNAME文件，填上域名，部署到Github即可。</li>
-<li>Coding在Pages服务页面绑定个人域名即可。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/1.png" alt=""></li>
-</ul>
-<p>设置域名解析，我用的万网域名，在控制台进入域名解析界面，加入下面两条记录。<br><img src="http://7xspil.com1.z0.glb.clouddn.com/3.png" alt=""></p>
-<h2 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h2><p>在<code>blog\themes\next\source\</code>下新建<code>404.html</code>文件，内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;404 - arao&apos;blog&lt;/title&gt;</div><div class="line">	&lt;meta name=&quot;description&quot; content=&quot;404错误，页面不存在！&quot;&gt;</div><div class="line">	&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</div><div class="line">	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</div><div class="line">	&lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</div><div class="line">	&lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;http://qzonestyle.gtimg.cn/qzone_v6/lostchild/search_children.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>推荐使用<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛</a>。</p>
 
       
     </div>
@@ -379,11 +319,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/Python-3/" rel="tag">#Python 3</a>
           
-            <a href="/tags/Github/" rel="tag">#Github</a>
-          
-            <a href="/tags/Coding/" rel="tag">#Coding</a>
+            <a href="/tags/爬虫/" rel="tag">#爬虫</a>
           
         </div>
       
@@ -392,12 +330,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/10/24/Python 3爬虫入门二之爬虫基础了解/" rel="next" title="Python 3爬虫入门二之爬虫基础了解">
+                <i class="fa fa-chevron-left"></i> Python 3爬虫入门二之爬虫基础了解
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/24/Python 3爬虫学习系列教程/" rel="prev" title="Python 3爬虫学习系列教程">
-                Python 3爬虫学习系列教程 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/25/Python 3爬虫入门四之Urllib库的高级用法/" rel="prev" title="Python 3爬虫入门四之Urllib库的高级用法">
+                Python 3爬虫入门四之Urllib库的高级用法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -424,8 +366,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/26/Hexo同时部署个人博客至Github和Coding/"
-           data-title="Hexo同时部署个人博客至Github和Coding" data-url="http://qiyege.cc/2016/07/26/Hexo同时部署个人博客至Github和Coding/">
+      <div class="ds-thread" data-thread-key="2017/10/24/Python 3爬虫入门三之Urllib库的基本使用/"
+           data-title="Python 3爬虫入门三之Urllib库的基本使用" data-url="http://qiyege.cc/2017/10/24/Python 3爬虫入门三之Urllib库的基本使用/">
       </div>
     
   </div>
@@ -531,7 +473,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么用Hexo搭建独立博客？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么用Hexo搭建独立博客？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么用Github和Coding托管平台？"><span class="nav-number">1.2.</span> <span class="nav-text">为什么用Github和Coding托管平台？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Github和Coding"><span class="nav-number">2.</span> <span class="nav-text">注册Github和Coding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装准备软件"><span class="nav-number">3.</span> <span class="nav-text">安装准备软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装并修改Hexo主题"><span class="nav-number">5.</span> <span class="nav-text">安装并修改Hexo主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布新文章"><span class="nav-number">6.</span> <span class="nav-text">发布新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启Pages服务"><span class="nav-number">7.</span> <span class="nav-text">开启Pages服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定个人域名"><span class="nav-number">8.</span> <span class="nav-text">绑定个人域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#404页面"><span class="nav-number">9.</span> <span class="nav-text">404页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图床"><span class="nav-number">10.</span> <span class="nav-text">图床</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分分钟扒一个网页下来"><span class="nav-number">1.</span> <span class="nav-text">分分钟扒一个网页下来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析扒网页的方法"><span class="nav-number">2.</span> <span class="nav-text">分析扒网页的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造Request"><span class="nav-number">3.</span> <span class="nav-text">构造Request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POST和GET数据传送"><span class="nav-number">4.</span> <span class="nav-text">POST和GET数据传送</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#POST方式"><span class="nav-number">4.1.</span> <span class="nav-text">POST方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET方式"><span class="nav-number">4.2.</span> <span class="nav-text">GET方式</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -553,7 +495,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
